@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GUESS GAME</title>
+    <style>
+        .clock-body{
+            height: 250px;
+            width: 300px;
+            text-align: center;
+            background-color: aqua;
+            box-sizing: border-box;
+            padding: 10px;
+        }
+        h2{
+            border: 3px solid ;
+        }
+        input {
+            padding: 10px;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="clock-body">
+        <h2>Message</h2>
+            <input type="button" value="1" onclick="demo(this)">
+            <input type="button" value="2" onclick="demo(this)">
+            <input type="button" value="3" onclick="demo(this)"><br>
+            <input type="button" value="4" onclick="demo(this)">
+            <input type="button" value="5" onclick="demo(this)">
+            <input type="button" value="6" onclick="demo(this)"><br>
+            <input type="button" value="7" onclick="demo(this)">
+            <input type="button" value="8" onclick="demo(this)">
+            <input type="button" value="9" onclick="demo(this)">
+    </div>
+    <script>
+    function demo(x) {
+        let h=document.querySelector("h2")
+        let m=Math.floor(Math.random()*10)
+        let input=document.querySelectorAll("input")
+        if (x.value==m) {
+            h.innerHTML="You Win"
+            h.style.backgroundColor='green'
+            h.style.border='3px solid green'
+        } else {
+            h.innerHTML="You Loss"
+            h.style.backgroundColor='red'
+            h.style.border='3px solid red' 
+        }
+    }
+    </script>
+</body>
+</html>
